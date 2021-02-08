@@ -76,15 +76,87 @@ section
             gap:  25px 25px
             .produit
                 height: 375px
-                background-color: red
                 text-align: center
-
-
-
-
-
-
-
+                overflow: hidden
+                .produit_calque
+                    overflow: hidden
+                    height: 250px
+                    .produit-image
+                        height: 250px
+                        background-position: center
+                        background-size: cover
+                        transition: 1s all ease-in-out
+                    .view
+                        position: relative
+                        bottom: 0px
+                        height: 0%
+                        width: 100%
+                        color: white
+                        overflow: hidden
+                        display: flex
+                        font-size: 10px
+                        transition-duration: 1.8s
+                        .red
+                            width: 50%
+                            background-color: $rouge
+                            opacity: 90%
+                            padding-top: 10px
+                        .black
+                            width: 50%
+                            background-color: black
+                            opacity: 90%
+                            padding-top: 8px
+                    .produit-image:hover
+                        transform: scale(1.2)
+                        
+            #produit-1
+                .produit-image
+                    background-image: url(../img/products_mini/product-luxry-sofa.jpg)
+            #produit-2
+                .produit-image
+                    background-image: url(../img/products_mini/product-gloves.jpg)
+            #produit-3
+                .produit-image
+                    background-image: url(../img/products_mini/product-cups.jpg)
+            #produit-4
+                .produit-image
+                    background-image: url(../img/products_mini/product-bag.jpg)
+            #produit-5
+                .produit-image
+                    background-image: url(../img/products_mini/product-tshitr.jpg)
+            #produit-6
+                .produit-image
+                    background-image: url(../img/products_mini/product-plates.jpg)
+            #produit-7
+                .produit-image
+                    background-image: url(../img/products_mini/product-modern-sofa.jpg)
+            #produit-8
+                .produit-image
+                    background-image: url(../img/products_mini/product-bed.jpg)
+            #produit-9
+                .produit-image
+                    background-image: url(../img/products_mini/product-shoes.jpg)
+            .produit-info
+                height: 125px
+                background-color: white
+                display: flex
+                justify-content: space-around
+                align-items: center
+                p
+                    font-weight: bold
+                .prix
+                    color: $rouge
+                    span
+                        color: grey
+                        text-decoration: line-through
+                button
+                    color: white
+                    background-color: $rouge
+                    border: none
+                    height: 70px
+                    width: 70px
+                    border-radius: 50%
+                    font-weight: bold
 @media screen and ( max-width: 1024px )
     section
         #banner
@@ -100,7 +172,7 @@ section
                 width: 100px
                 height: 50px
                 border-radius: 25px
-        .container
+        .container1
             grid: "fiche1" auto/1fr
             gap:  25px 25px
             div
@@ -115,11 +187,16 @@ section
             #fiche3
                 background-position: center
                 background-size: cover
-
+        .container2
+            padding: 50px 15px
+            #grid
+                display: grid
+                grid: "fiche1" auto/1fr
+                gap:  25px 25px
 @media screen and ( max-width: 812px )
     section
         #banner
-            padding: 0px 50px
+            padding: 0px 100px
             background-position-x: right 0px
             h2
                 font-size: 25px
@@ -128,8 +205,28 @@ section
             p
                 font-size: 12px
             button
-                margin-top: 25px
                 width: 100px
                 height: 50px
                 border-radius: 25px
+        .container1
+            grid: "fiche1" auto/1fr
+            gap:  25px 25px
+            div
+                p
+                hr
+            #fiche1
+                background-position: center
+                background-size: cover
+            #fiche2
+                background-position: center
+                background-size: cover
+            #fiche3
+                background-position: center
+                background-size: cover
+        .container2
+            padding: 50px 15px
+            #grid
+                display: grid
+                grid: "fiche1" auto/1fr
+                gap:  25px 25px
 

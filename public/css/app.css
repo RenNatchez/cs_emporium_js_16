@@ -58,11 +58,11 @@ header #navburger {
   height: 100%;
   width: 0%;
   position: fixed;
+  overflow-x: hidden;
   z-index: 1;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
   transition: 0.5;
 }
 header #navburger .menu {
@@ -221,8 +221,97 @@ section .container2 #grid {
 }
 section .container2 #grid .produit {
   height: 375px;
-  background-color: red;
   text-align: center;
+  overflow: hidden;
+}
+section .container2 #grid .produit .produit_calque {
+  overflow: hidden;
+  height: 250px;
+}
+section .container2 #grid .produit .produit_calque .produit-image {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  transition: 1s all ease-in-out;
+}
+section .container2 #grid .produit .produit_calque .view {
+  position: relative;
+  bottom: 0px;
+  height: 0%;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  font-size: 10px;
+  transition-duration: 1.8s;
+}
+section .container2 #grid .produit .produit_calque .view .red {
+  width: 50%;
+  background-color: #dd4545;
+  opacity: 90%;
+  padding-top: 10px;
+}
+section .container2 #grid .produit .produit_calque .view .black {
+  width: 50%;
+  background-color: black;
+  opacity: 90%;
+  padding-top: 8px;
+}
+section .container2 #grid .produit .produit_calque .produit-image:hover {
+  transform: scale(1.2);
+}
+section .container2 #grid #produit-1 .produit-image {
+  background-image: url(../img/products_mini/product-luxry-sofa.jpg);
+}
+section .container2 #grid #produit-2 .produit-image {
+  background-image: url(../img/products_mini/product-gloves.jpg);
+}
+section .container2 #grid #produit-3 .produit-image {
+  background-image: url(../img/products_mini/product-cups.jpg);
+}
+section .container2 #grid #produit-4 .produit-image {
+  background-image: url(../img/products_mini/product-bag.jpg);
+}
+section .container2 #grid #produit-5 .produit-image {
+  background-image: url(../img/products_mini/product-tshitr.jpg);
+}
+section .container2 #grid #produit-6 .produit-image {
+  background-image: url(../img/products_mini/product-plates.jpg);
+}
+section .container2 #grid #produit-7 .produit-image {
+  background-image: url(../img/products_mini/product-modern-sofa.jpg);
+}
+section .container2 #grid #produit-8 .produit-image {
+  background-image: url(../img/products_mini/product-bed.jpg);
+}
+section .container2 #grid #produit-9 .produit-image {
+  background-image: url(../img/products_mini/product-shoes.jpg);
+}
+section .container2 #grid .produit-info {
+  height: 125px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section .container2 #grid .produit-info p {
+  font-weight: bold;
+}
+section .container2 #grid .produit-info .prix {
+  color: #dd4545;
+}
+section .container2 #grid .produit-info .prix span {
+  color: grey;
+  text-decoration: line-through;
+}
+section .container2 #grid .produit-info button {
+  color: white;
+  background-color: #dd4545;
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1024px) {
@@ -244,26 +333,34 @@ section .container2 #grid .produit {
     height: 50px;
     border-radius: 25px;
   }
-  section .container {
+  section .container1 {
     grid: "fiche1" auto/1fr;
     gap: 25px 25px;
   }
-  section .container #fiche1 {
+  section .container1 #fiche1 {
     background-position: center;
     background-size: cover;
   }
-  section .container #fiche2 {
+  section .container1 #fiche2 {
     background-position: center;
     background-size: cover;
   }
-  section .container #fiche3 {
+  section .container1 #fiche3 {
     background-position: center;
     background-size: cover;
+  }
+  section .container2 {
+    padding: 50px 15px;
+  }
+  section .container2 #grid {
+    display: grid;
+    grid: "fiche1" auto/1fr;
+    gap: 25px 25px;
   }
 }
 @media screen and (max-width: 812px) {
   section #banner {
-    padding: 0px 50px;
+    padding: 0px 100px;
     background-position-x: right 0px;
   }
   section #banner h2 {
@@ -276,10 +373,33 @@ section .container2 #grid .produit {
     font-size: 12px;
   }
   section #banner button {
-    margin-top: 25px;
     width: 100px;
     height: 50px;
     border-radius: 25px;
+  }
+  section .container1 {
+    grid: "fiche1" auto/1fr;
+    gap: 25px 25px;
+  }
+  section .container1 #fiche1 {
+    background-position: center;
+    background-size: cover;
+  }
+  section .container1 #fiche2 {
+    background-position: center;
+    background-size: cover;
+  }
+  section .container1 #fiche3 {
+    background-position: center;
+    background-size: cover;
+  }
+  section .container2 {
+    padding: 50px 15px;
+  }
+  section .container2 #grid {
+    display: grid;
+    grid: "fiche1" auto/1fr;
+    gap: 25px 25px;
   }
 }
 /*!
