@@ -1,0 +1,135 @@
+section
+    #banner
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0px 300px
+        height: 500px
+        background-image: url(../img/slider-1.jpg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-color: #f3f3f3
+        background-position-x: right 300px
+        h2
+            color: $rouge
+            font-size: 50px
+            margin: 0
+            span
+                color: black
+                font-size: 100px
+                line-height: 90px
+        p
+            color: grey
+        button
+            background-color: $rouge
+            color: white 
+            width: 150px
+            height: 50px
+            border-radius: 50px
+            text-transform: uppercase
+            border: none
+    .container1
+        padding: 50px 15px
+        display: grid
+        grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr
+        gap:  0 25px
+        div
+            height: 250px
+            width: 100%
+            text-align: center
+            font-size: 40px
+            color: white
+            display: flex
+            flex-direction: column
+            justify-content: center
+            p
+                margin: 0
+            hr
+                height: 3px
+                width: 70%
+                margin: 0 auto
+                border: 0
+                color: white
+                background-color: white
+        #fiche1
+            background-color: green
+            grid-area: "fiche1"
+            background-image: url(../img/services/service-1.jpg)
+        #fiche2
+            background-color: blue
+            grid-area: "fiche2"
+            background-image: url(../img/services/service-2.jpg)
+        #fiche3
+            background-color: white
+            grid-area: "fiche3"
+            background-image: url(../img/services/slider-3.jpg)
+    .container2
+        padding: 50px 300px
+        h4
+            font-size: 30px
+            text-align: center
+            margin: 0
+            padding-bottom: 50px
+        #grid
+            display: grid
+            grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr
+            gap:  25px 25px
+            .produit
+                height: 375px
+                background-color: red
+                text-align: center
+
+
+
+
+
+
+
+@media screen and ( max-width: 1024px )
+    section
+        #banner
+            padding: 0px 100px
+            background-position-x: right 0px
+            h2
+                font-size: 40px
+                span
+                    font-size: 70px
+            p
+                font-size: 12px
+            button
+                width: 100px
+                height: 50px
+                border-radius: 25px
+        .container
+            grid: "fiche1" auto/1fr
+            gap:  25px 25px
+            div
+                p
+                hr
+            #fiche1
+                background-position: center
+                background-size: cover
+            #fiche2
+                background-position: center
+                background-size: cover
+            #fiche3
+                background-position: center
+                background-size: cover
+
+@media screen and ( max-width: 812px )
+    section
+        #banner
+            padding: 0px 50px
+            background-position-x: right 0px
+            h2
+                font-size: 25px
+                span
+                    font-size: 40px
+            p
+                font-size: 12px
+            button
+                margin-top: 25px
+                width: 100px
+                height: 50px
+                border-radius: 25px
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Emporium</title>
     <link rel="stylesheet" href="./public/css/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
@@ -29,20 +31,90 @@
                     <li><a href="">Contact</a></li>
                     <li><a href="" id="connexion">Connexion</a></li>
                 </ul>
-                <div>
-                    <!-- Espace de droite -->
+                <div id="menuDeroulant">
+                    <!-- Espace de droite nav nimi media-->
+                    <div id="navburger">
+                        <a href="javascript:void(0)" class="close">&times;</a>
+                        <div class="menu">
+                            <!-- menu -->
+                            <a href="">Home</a>
+                            <a href="">Product</a>
+                            <a href="">Blog</a>
+                            <a href="">Elements</a>
+                            <a href="">About</a>
+                            <a href="">Contact</a>
+                            <a href="" id="connexion">Connexion</a>
+                        </div>
+                    </div>
+                    <span id="burger-icon"><i class="fas fa-bars"></i></span>
                 </div>
             </div>
         </nav>
+    </header>
+
+    <section>
         <!-- Banner -->
         <div id="banner">
             <h2>Shop at</h2>
             <h2><span>emporium.</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem id incidunt adipisci,<br> architecto cumque voluptas quis distinctio numquam?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem id incidunt adipisci,<br> architecto
+                cumque voluptas quis distinctio numquam?</p>
             <button>Sale Items</button>
         </div>
-    </header>
+        <!-- services -->
+        <div class="container1">
+            <div id="fiche1">
+                <p>Living Room</p>
+                <hr>
+            </div>
+            <div id="fiche2">
+                <p>Sale Items</p>
+                <hr>
+            </div>
+            <div id="fiche3">
+                <p>Clothes</p>
+                <hr>
+            </div>
+        </div>
+            <!-- Produits -->
+        <div class="container2">
+            <h4>Recents Products</h4>
+            <div id="grid">
+                <div id="produit-1" class="produit">
+                    <div class="produit-image">
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div id="produit-2" class="produit">
 
+                </div>
+                <div id="produit-3" class="produit">
+
+                </div>
+                <div id="produit-4" class="produit">
+
+                </div>
+                <div id="produit-5" class="produit">
+
+                </div>
+                <div id="produit-6" class="produit">
+
+                </div>
+                <div id="produit-7" class="produit">
+
+                </div>
+                <div id="produit-8" class="produit">
+
+                </div>
+                <div id="produit-9" class="produit">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
     <script src="./public/js/main.js"></script>
 </body>
+
 </html>

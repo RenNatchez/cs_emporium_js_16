@@ -1,4 +1,9 @@
 @charset "UTF-8";
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
 header nav h1 {
   text-align: center;
   font-size: 3em;
@@ -37,7 +42,94 @@ header nav .container div {
   align-items: center;
   flex: 1;
 }
-header #banner {
+header nav .container #navburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+header #burger-icon {
+  width: 50px;
+  text-align: center;
+  font-size: 35px;
+  display: none;
+}
+header #navburger {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5;
+}
+header #navburger .menu {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  top: 30px;
+}
+header #navburger .menu a {
+  font-size: 30px;
+  text-decoration: none;
+  margin: 10px;
+  color: grey;
+  transition: 0.5s;
+}
+header #navburger .menu a:hover {
+  color: white;
+}
+header #navburger .close {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  top: 5%;
+  right: 15%;
+  font-size: 75px;
+}
+
+@media screen and (max-width: 1024px) {
+  header nav .container ul {
+    display: none;
+  }
+  header nav .container ul a {
+    display: none;
+  }
+  header nav .container div {
+    flex: 0;
+  }
+  header nav .container #menuDeroulant {
+    flex: 1;
+  }
+  header #burger-icon {
+    display: block;
+  }
+  header #navburger .menu {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 812px) {
+  header nav .container ul {
+    display: none;
+  }
+  header nav .container ul a {
+    display: none;
+  }
+  header nav .container div {
+    flex: 0;
+  }
+  header nav .container #menuDeroulant {
+    flex: 1;
+  }
+  header #navburger .menu {
+    top: 0px;
+  }
+}
+section #banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,20 +141,20 @@ header #banner {
   background-color: #f3f3f3;
   background-position-x: right 300px;
 }
-header #banner h2 {
+section #banner h2 {
   color: #dd4545;
   font-size: 50px;
   margin: 0;
 }
-header #banner h2 span {
+section #banner h2 span {
   color: black;
   font-size: 100px;
   line-height: 90px;
 }
-header #banner p {
+section #banner p {
   color: grey;
 }
-header #banner button {
+section #banner button {
   background-color: #dd4545;
   color: white;
   width: 150px;
@@ -71,12 +163,125 @@ header #banner button {
   text-transform: uppercase;
   border: none;
 }
-
-body {
+section .container1 {
+  padding: 50px 15px;
+  display: grid;
+  grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr;
+  gap: 0 25px;
+}
+section .container1 div {
+  height: 250px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .container1 div p {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+}
+section .container1 div hr {
+  height: 3px;
+  width: 70%;
+  margin: 0 auto;
+  border: 0;
+  color: white;
+  background-color: white;
+}
+section .container1 #fiche1 {
+  background-color: green;
+  grid-area: "fiche1";
+  background-image: url(../img/services/service-1.jpg);
+}
+section .container1 #fiche2 {
+  background-color: blue;
+  grid-area: "fiche2";
+  background-image: url(../img/services/service-2.jpg);
+}
+section .container1 #fiche3 {
+  background-color: white;
+  grid-area: "fiche3";
+  background-image: url(../img/services/slider-3.jpg);
+}
+section .container2 {
+  padding: 50px 300px;
+}
+section .container2 h4 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 50px;
+}
+section .container2 #grid {
+  display: grid;
+  grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr;
+  gap: 25px 25px;
+}
+section .container2 #grid .produit {
+  height: 375px;
+  background-color: red;
+  text-align: center;
 }
 
+@media screen and (max-width: 1024px) {
+  section #banner {
+    padding: 0px 100px;
+    background-position-x: right 0px;
+  }
+  section #banner h2 {
+    font-size: 40px;
+  }
+  section #banner h2 span {
+    font-size: 70px;
+  }
+  section #banner p {
+    font-size: 12px;
+  }
+  section #banner button {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  section .container {
+    grid: "fiche1" auto/1fr;
+    gap: 25px 25px;
+  }
+  section .container #fiche1 {
+    background-position: center;
+    background-size: cover;
+  }
+  section .container #fiche2 {
+    background-position: center;
+    background-size: cover;
+  }
+  section .container #fiche3 {
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 812px) {
+  section #banner {
+    padding: 0px 50px;
+    background-position-x: right 0px;
+  }
+  section #banner h2 {
+    font-size: 25px;
+  }
+  section #banner h2 span {
+    font-size: 40px;
+  }
+  section #banner p {
+    font-size: 12px;
+  }
+  section #banner button {
+    margin-top: 25px;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+  }
+}
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
