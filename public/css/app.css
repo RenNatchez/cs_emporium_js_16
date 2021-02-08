@@ -1,4 +1,82 @@
 @charset "UTF-8";
+header nav h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 50px 0px;
+}
+header nav #titre_schrol {
+  display: none;
+  margin: 0;
+}
+header nav .container {
+  display: flex;
+  height: 6em;
+}
+header nav .container ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 2;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header nav .container ul a {
+  text-decoration: none;
+  color: grey;
+}
+header nav .container ul #connexion {
+  color: white;
+  background: grey;
+  padding: 10px 20px;
+}
+header nav .container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+header #banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 300px;
+  height: 500px;
+  background-image: url(../img/slider-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f3f3f3;
+  background-position-x: right 300px;
+}
+header #banner h2 {
+  color: #dd4545;
+  font-size: 50px;
+  margin: 0;
+}
+header #banner h2 span {
+  color: black;
+  font-size: 100px;
+  line-height: 90px;
+}
+header #banner p {
+  color: grey;
+}
+header #banner button {
+  background-color: #dd4545;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  border: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
