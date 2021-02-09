@@ -63,7 +63,7 @@ header #navburger {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  transition: 0.5;
+  transition: 0.5s;
 }
 header #navburger .menu {
   position: relative;
@@ -427,6 +427,122 @@ section .container2 #grid .produit-info button {
   width: 150px;
   border-radius: 10px;
 }
+.section2 .carousel h4 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.section2 .carousel .content {
+  height: 250px;
+  margin: 0 302px;
+  display: flex;
+  overflow: hidden;
+}
+.section2 .carousel .content .slide {
+  display: flex;
+  transition: 0.5s;
+}
+.section2 .carousel .content .slide .card {
+  margin: 0 30px;
+}
+.section2 .carousel .content .slide .card .image {
+  height: 170px;
+  width: 250px;
+  background-position: center;
+  background-size: cover;
+}
+.section2 .carousel .content .slide .card .image-1 {
+  background-image: url(../img/products_mini/product-luxry-sofa.jpg);
+}
+.section2 .carousel .content .slide .card .image-2 {
+  background-image: url(../img/products_mini/product-gloves.jpg);
+}
+.section2 .carousel .content .slide .card .image-3 {
+  background-image: url(../img/products_mini/product-cups.jpg);
+}
+.section2 .carousel .content .slide .card .image-4 {
+  background-image: url(../img/products_mini/product-bag.jpg);
+}
+.section2 .carousel .content .slide .card .image-5 {
+  background-image: url(../img/products_mini/product-tshitr.jpg);
+}
+.section2 .carousel .content .slide .card .image-6 {
+  background-image: url(../img/products_mini/product-plates.jpg);
+}
+.section2 .carousel .content .slide .card .image-7 {
+  background-image: url(../img/products_mini/product-modern-sofa.jpg);
+}
+.section2 .carousel .content .slide .card .image-8 {
+  background-image: url(../img/products_mini/product-bed.jpg);
+}
+.section2 .carousel .content .slide .card .cart-text {
+  height: 85px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.section2 .carousel .content .slide .card .cart-text p {
+  font-weight: bold;
+}
+.section2 .carousel .content .slide .card .cart-text .red {
+  color: #dd4545;
+}
+.section2 .carousel .content .slide .card .cart-text span {
+  color: grey;
+  text-decoration: line-through;
+}
+.section2 .carousel .content .slide .card button {
+  color: white;
+  background-color: #dd4545;
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+.section2 .carousel .content .slide .card-1 {
+  margin-left: 60px;
+}
+.section2 .carousel .content .slide .card-8 {
+  margin-right: 60px;
+}
+.section2 .map {
+  margin-top: 1em;
+  padding-top: 50px;
+  padding-bottom: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.section2 .map div {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section2 .map div button {
+  all: unset;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+  border: solid 1px grey;
+}
+.section2 .map .divFiv {
+  display: none;
+}
+.section2 .map .divSix {
+  display: none;
+}
+.section2 .map .border {
+  border: solid 2px aqua;
+  opacity: 15%;
+}
 
 @media screen and (max-width: 1200px) {
   .section2 .discover {
@@ -436,10 +552,28 @@ section .container2 #grid .produit-info button {
     font-size: 32px;
     text-align: center;
   }
+  .section2 .carousel .content {
+    margin: 0 auto;
+    width: 88%;
+  }
+  .section2 .map .divFiv {
+    display: block;
+  }
+  .section2 .map .divSix {
+    display: block;
+  }
 }
 @media screen and (max-width: 600px) {
   .section2 .discover p {
     font-size: 27px;
+  }
+  .section2 .carousel .content {
+    margin: 0 auto;
+    margin-right: 40px;
+    width: 88%;
+  }
+  .section2 .carousel .content .slide {
+    margin: 0 auto;
   }
 }
 /*!
