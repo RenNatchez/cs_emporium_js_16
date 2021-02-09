@@ -402,6 +402,46 @@ section .container2 #grid .produit-info button {
     gap: 25px 25px;
   }
 }
+.section2 .discover {
+  height: 750px;
+  background-image: url(../img/cta-bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.section2 .discover p {
+  font-size: 60px;
+}
+.section2 .discover button {
+  background-color: #dd4545;
+  border: none;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .section2 .discover {
+    height: 500px;
+  }
+  .section2 .discover p {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section2 .discover p {
+    font-size: 27px;
+  }
+}
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
