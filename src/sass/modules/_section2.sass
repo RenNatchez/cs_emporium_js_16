@@ -112,8 +112,54 @@
         .border
             border: solid 2px aqua
             opacity: 15%
-
-
+    .avis
+        display: grid
+        grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr
+        padding: 0 15px
+        gap:  0 25px
+        padding-bottom: 50px
+        div
+            height: 500px
+            text-align: center
+            padding: 0 25px
+            display: flex
+            justify-content: center
+            flex-direction: column
+            i
+                font-size: 40px
+                margin-bottom: 25px
+            h5
+                font-size: 20px
+                margin: 30px 0
+                text-transform: uppercase
+        .avis-rouge
+            background-color: $rouge
+            color: white
+            button
+                border: none
+                font-size: 15px
+                margin: 0 auto
+                margin-top: 30px 
+                background-color: white
+                color: #343a40
+                height: 45px
+                width: 150px
+                border-radius: 10px
+                text-transform: uppercase
+        .avis-clair
+            background-color: #dbdbdb
+            color: #343a40
+            button
+                border: none
+                font-size: 15px
+                margin: 0 auto
+                margin-top: 30px 
+                background-color: #343a40
+                color: white
+                height: 45px
+                width: 150px
+                border-radius: 10px
+                text-transform: uppercase
 
 
 
@@ -133,6 +179,9 @@
                 display: block
             .divSix
                 display: block
+        .avis
+            grid: "fiche1" auto/1fr
+
 @media screen and (max-width: 600px)
     .section2
         .discover

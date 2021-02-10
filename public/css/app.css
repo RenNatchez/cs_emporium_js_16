@@ -2,12 +2,19 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  overflow-y: auto;
 }
 
+header {
+  top: 0px;
+  background-color: white;
+  z-index: 1;
+}
 header nav h1 {
   text-align: center;
   font-size: 3em;
-  margin: 50px 0px;
+  padding: 50px 0px;
+  margin: 0;
 }
 header nav #titre_schrol {
   display: none;
@@ -16,6 +23,10 @@ header nav #titre_schrol {
 header nav .container {
   display: flex;
   height: 6em;
+  width: 100%;
+  background-color: white;
+  justify-content: space-around;
+  z-index: 1;
 }
 header nav .container ul {
   display: flex;
@@ -34,7 +45,8 @@ header nav .container ul a {
 header nav .container ul #connexion {
   color: white;
   background: grey;
-  padding: 10px 20px;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 header nav .container div {
   display: flex;
@@ -91,6 +103,138 @@ header #navburger .close {
   right: 15%;
   font-size: 75px;
 }
+header .modal {
+  width: 800px;
+  margin: auto auto;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+header .modal .head {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  align-items: center;
+}
+header .modal .head h2 {
+  font-size: 40px;
+  margin: 0;
+}
+header .modal .head i {
+  font-size: 50px;
+  color: #dd4545;
+  opacity: 50%;
+}
+header .modal button {
+  border: none;
+  background-color: #dd4545;
+  color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 0 7px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+header .modal .input-connexion {
+  margin: 0 50px;
+  text-align: justify;
+  display: none;
+}
+header .modal .input-connexion p {
+  margin: 0px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 17px;
+}
+header .modal .input-connexion input {
+  height: 35px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 20px;
+}
+header .modal .input-connexion span {
+  color: grey;
+  font-size: 13px;
+}
+header .modal .input-connexion .coche {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 15px;
+}
+header .modal .input-connexion .coche input {
+  width: unset;
+}
+header .modal .input-connexion .submit {
+  background-color: aqua;
+  margin-top: 10px;
+}
+header .modal .input-inscription {
+  margin: 0 50px;
+  text-align: justify;
+  display: none;
+}
+header .modal .input-inscription p {
+  margin: 0px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 17px;
+}
+header .modal .input-inscription input {
+  height: 35px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 20px;
+}
+header .modal .input-inscription span {
+  color: grey;
+  font-size: 13px;
+}
+header .modal .input-inscription .coche {
+  justify-content: start;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 15px;
+}
+header .modal .input-inscription .coche div {
+  display: flex;
+  align-items: center;
+}
+header .modal .input-inscription .coche input {
+  width: unset;
+}
+header .modal .input-inscription .center {
+  text-align: center;
+}
+header .modal .input-inscription .center .btn-inscription {
+  background-color: aqua;
+  margin-top: 10px;
+  margin: 0 auto;
+}
+header .modal .foot {
+  display: flex;
+  justify-content: center;
+  margin: 25px 25px;
+  align-items: center;
+  font-size: 35px;
+}
+header .modal .foot i {
+  margin: 0 10px;
+}
+header .modal .foot .fa-facebook-f {
+  color: blue;
+}
+header .modal .foot .fa-snapchat-ghost {
+  color: yellow;
+}
 
 @media screen and (max-width: 1024px) {
   header nav .container ul {
@@ -105,11 +249,14 @@ header #navburger .close {
   header nav .container #menuDeroulant {
     flex: 1;
   }
-  header #burger-icon {
+  header nav #burger-icon {
     display: block;
   }
-  header #navburger .menu {
+  header nav #navburger .menu {
     top: 0px;
+  }
+  header .modal {
+    width: 80%;
   }
 }
 @media screen and (max-width: 812px) {
@@ -124,6 +271,9 @@ header #navburger .close {
   }
   header nav .container #menuDeroulant {
     flex: 1;
+  }
+  header #navburger {
+    display: block;
   }
   header #navburger .menu {
     top: 0px;
@@ -243,7 +393,7 @@ section .container2 #grid .produit .produit_calque .view {
   overflow: hidden;
   display: flex;
   font-size: 10px;
-  transition-duration: 1.8s;
+  transition-duration: 0.5s;
 }
 section .container2 #grid .produit .produit_calque .view .red {
   width: 50%;
@@ -513,7 +663,7 @@ section .container2 #grid .produit-info button {
 .section2 .map {
   margin-top: 1em;
   padding-top: 50px;
-  padding-bottom: 500px;
+  padding-bottom: 100px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -543,6 +693,62 @@ section .container2 #grid .produit-info button {
   border: solid 2px aqua;
   opacity: 15%;
 }
+.section2 .avis {
+  display: grid;
+  grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr;
+  padding: 0 15px;
+  gap: 0 25px;
+  padding-bottom: 50px;
+}
+.section2 .avis div {
+  height: 500px;
+  text-align: center;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section2 .avis div i {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.section2 .avis div h5 {
+  font-size: 20px;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+.section2 .avis .avis-rouge {
+  background-color: #dd4545;
+  color: white;
+}
+.section2 .avis .avis-rouge button {
+  border: none;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: white;
+  color: #343a40;
+  height: 45px;
+  width: 150px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.section2 .avis .avis-clair {
+  background-color: #dbdbdb;
+  color: #343a40;
+}
+.section2 .avis .avis-clair button {
+  border: none;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #343a40;
+  color: white;
+  height: 45px;
+  width: 150px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
 
 @media screen and (max-width: 1200px) {
   .section2 .discover {
@@ -562,6 +768,9 @@ section .container2 #grid .produit-info button {
   .section2 .map .divSix {
     display: block;
   }
+  .section2 .avis {
+    grid: "fiche1" auto/1fr;
+  }
 }
 @media screen and (max-width: 600px) {
   .section2 .discover p {
@@ -574,6 +783,101 @@ section .container2 #grid .produit-info button {
   }
   .section2 .carousel .content .slide {
     margin: 0 auto;
+  }
+}
+footer .tag {
+  background-color: #343a40;
+  display: grid;
+  grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr;
+  padding: 100px 400px;
+  gap: 0 25px;
+}
+footer .tag div h6 {
+  margin: 0;
+  border: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 30px;
+}
+footer .tag .about p {
+  color: grey;
+}
+footer .tag .posts {
+  color: white;
+}
+footer .tag .cloud {
+  color: grey;
+}
+footer .tag .cloud div {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .tag .cloud span {
+  border: solid 1px grey;
+  font-size: 13px;
+  padding: 5px 20px;
+  margin: 5px;
+  border-radius: 5pxcopu;
+}
+footer .copyright {
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .copyright p {
+  all: unset;
+  color: white;
+  text-transform: uppercase;
+  color: grey;
+}
+
+@media screen and (max-width: 1200px) {
+  footer .tag {
+    grid: "fiche1" auto/1fr 1fr 1fr;
+    padding: 0 50px;
+    gap: 0 25px;
+  }
+  footer .tag .about h6 {
+    margin-top: 40px;
+  }
+  footer .tag .about p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  footer .tag .posts h6 {
+    margin-top: 40px;
+  }
+  footer .tag .posts p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  footer .tag .cloud {
+    margin-bottom: 40px;
+  }
+  footer .tag .cloud h6 {
+    margin-top: 40px;
+  }
+  footer .tag .cloud span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .tag {
+    grid: "fiche1" auto/1fr;
+    padding: 0 50px;
+    gap: 0 25px;
+  }
+  footer .tag .posts h6 {
+    margin-top: 0px;
+  }
+  footer .tag .cloud h6 {
+    margin-top: 0px;
+  }
+  footer .copyright {
+    font-size: 10px;
   }
 }
 /*!

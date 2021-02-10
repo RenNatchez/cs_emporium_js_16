@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <nav>
             <!-- Titre -->
-            <h1>emporium.</h1>
+            <div class="nav-titre">
+                <h1>emporium.</h1>
+            </div>
             <div class="container">
                 <div>
                     <!-- Titre caché-->
@@ -43,13 +44,62 @@
                             <a href="">Elements</a>
                             <a href="">About</a>
                             <a href="">Contact</a>
-                            <a href="" id="connexion">Connexion</a>
+                            <a href="" id="connexion-ipad">Connexion</a>
                         </div>
                     </div>
                     <span id="burger-icon"><i class="fas fa-bars"></i></span>
                 </div>
             </div>
         </nav>
+        <div class="modal">
+            <div class="head">
+                <h2>emporium.</h2>
+                <i class="fas fa-window-close"></i>
+            </div>
+            <button class="connexion">Connexion</button>
+            <button class="inscription">Inscription</button>
+            <div class="input-connexion">
+                <p>Email address</p>
+                <input type="text" placeholder="  abcdef@gmail.com"><br>
+                <span>Weil never share your email with anyone else.</span>
+                <p></p>
+                <input type="password" placeholder="  ********"><br>
+                <div class="coche">
+                    <input class="" type="checkbox" id="horns" name="horns">
+                    <label for="horns"> Check my  out</label>
+                </div>
+                <button class="submit">Submit</button>
+            </div>
+            <div class="input-inscription">
+                <p>Votre adress email</p>
+                <input type="text" placeholder="  abcdef@gmail.com"><br>
+                <span>Weil never share your email with anyone else.</span>
+                <p>Mot de passe</p>
+                <input type="password" placeholder="  ********"><br>
+                <p>Confirmez votre mot de passe</p>
+                <input type="password" placeholder="  ********"><br>
+
+                <div class="coche">
+                    <div>
+                        <input class="" type="checkbox" id="femme" name="femme">
+                        <label for="femme">Femme</label><br>
+                    </div>
+                    <div>
+                        <input class="" type="checkbox" id="homme" name="homme">
+                        <label for="homme">Homme</label>
+                    </div>
+                </div>
+                <div class="center">
+                    <button class="btn-inscription">Inscription</button>
+                </div>
+            </div>
+            <div class="foot">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </div>
     </header>
     <section>
         <!-- Banner -->
@@ -372,9 +422,60 @@
             </div>
         </div>
         <div class="avis">
-            
+            <div class="avis-clair">
+                <i class="far fa-check-circle"></i>
+                <h5>Trsuted by 10.000+ customers</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus a et commodi quam unde nam quos iure dolore iusto explicabo, sunt atque similique omnis.</p>
+                <button>Learn more</button>
+            </div>
+            <div class="avis-rouge">
+                <i class="fas fa-paper-plane"></i>
+                <h5>Trsuted by 10.000+ customers</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus a et commodi quam unde nam quos iure dolore iusto explicabo, sunt atque similique omnis.</p>
+                <button>Learn more</button>
+            </div>
+            <div class="avis-clair">
+                <i class="far fa-check-circle"></i>
+                <h5>Trsuted by 10.000+ customers</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus a et commodi quam unde nam quos iure dolore iusto explicabo, sunt atque similique omnis.</p>
+                <button>Learn more</button>
+            </div>
         </div>
     </section>
+    <footer>
+        <div class="tag">
+            <div class="about">
+                <h6>About us</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus similique quam non libero, alias voluptas voluptatem iste eius earum aliquid obcaecati quos aspernatur odit dolor velit.</p>
+            </div>
+            <div class="posts">
+                <h6>recents posts</h6>
+                <p>> Hello World</p>
+                <p>> Wonderful serenity has taken</p>
+                <p>> In my soul and absorb its power</p>
+                <p>> I hear the buzz of yhe little</p>
+
+            </div>
+            <div class="cloud">
+                <h6>tag cloud</h6>
+                <div>
+                    <span>business</span>
+                    <span>confidence</span>
+                    <span>gadgets</span>
+                    <span>identity</span>
+                    <span>logo</span>
+                    <span>photography</span>
+                    <span>time</span>
+                    <span>trips</span>
+                    <span>works</span>
+                    <span>work space</span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright 2020 goodlayers, all right reserved</p>
+        </div>
+    </footer>
     <script src="./public/js/main.js"></script>
 </body>
 

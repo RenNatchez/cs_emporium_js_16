@@ -1,17 +1,74 @@
+let body = document.querySelector(`body`)
+
 // selection du menu déroulant 
 let nav = document.querySelector(`#navburger`)
-
 // ouvrir le menu
 let open = document.querySelector(`#burger-icon`)
 open.addEventListener('click', () => {
     nav.style.width = "100%"
 })
 
-
 // fermer le menu
 let close = document.querySelector(`.close`)
 close.addEventListener('click', () => {
     nav.style.width = "0%"
+})
+
+let tagModal = document.querySelector('#connexion')
+let modal = document.querySelector('.modal')
+let closeModal = document.querySelector('.fa-window-close')
+
+let modalInscription = document.querySelector('.input-inscription')
+let modalConnexion = document.querySelector('.input-connexion')
+
+let btnInscription = document.querySelector('.inscription')
+let btnConnexion = document.querySelector('.connexion')
+let closeConnexion = document.querySelector('.submit')
+let closeInscription = document.querySelector('.btn-inscription')
+
+//ouvrir modal
+tagModal.addEventListener('click', (e) => {
+    e.preventDefault()
+    modal.style.display = 'block'
+    modalConnexion.style.display = 'block'
+    modalInscription.style.display = 'none'
+    modal.style.boxShadow = '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)'
+    body.style.overflowY = 'hidden'
+})
+let connexionIpad = document.querySelector(`#connexion-ipad`)
+connexionIpad.addEventListener('click', (e) => {
+    e.preventDefault()
+    nav.style.width = "0%"
+    modal.style.display = 'block'
+    modalConnexion.style.display = 'block'
+    modalInscription.style.display = 'none'
+    modal.style.boxShadow = '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)'
+    body.style.overflowY = 'hidden'
+})
+
+//fermer modal
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none'
+    body.style.overflowY = 'auto'
+})
+closeConnexion.addEventListener('click', () => {
+    modal.style.display = 'none'
+    body.style.overflowY = 'auto'
+})
+closeInscription.addEventListener('click', () => {
+    modal.style.display = 'none'
+    body.style.overflowY = 'auto'
+})
+
+//Afficher modal connexion
+btnConnexion.addEventListener('click', () => {
+    modalConnexion.style.display = 'block'
+    modalInscription.style.display = 'none'
+})
+//Afficher modal inscription
+btnInscription.addEventListener('click', () => {
+    modalInscription.style.display = 'block'
+    modalConnexion.style.display = 'none'
 })
 
 
@@ -69,3 +126,23 @@ buttons.addEventListener("click", e => {
         }
     }
 });
+
+
+
+// ouvrir le menu
+let titreCache = document.querySelector('#titre_schrol')
+let containeurNav = document.querySelector('.container')
+let titreNav = document.querySelector('.nav-titre')
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY>200) {
+        titreCache.style.display = 'block'
+        containeurNav.style.position ='fixed'
+        containeurNav.style.top ='0px'
+        titreNav.style.display ='none'
+    } else{
+        titreCache.style.display = 'none'
+        containeurNav.style.position ='relative'
+        titreNav.style.display ='block'
+    }
+})

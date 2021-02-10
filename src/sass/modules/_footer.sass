@@ -1,0 +1,82 @@
+footer
+    .tag
+        background-color: #343a40
+        display: grid
+        grid: "fiche1 fiche2 fiche3" auto/1fr 1fr 1fr
+        padding: 100px 400px
+        gap:  0 25px
+        div
+            h6
+                margin: 0
+                border: white
+                font-size: 15px
+                text-transform: uppercase
+                color: white
+                padding-bottom: 30px
+        .about
+            p
+                color: grey
+        .posts
+            color: white
+            p
+        .cloud
+            color: grey
+            div
+                display: flex
+                flex-wrap: wrap
+            span
+                border: solid 1px grey
+                font-size: 13px
+                padding: 5px 20px
+                margin: 5px
+                border-radius: 5pxcopu
+    .copyright
+        height: 50px
+        background-color: black
+        display: flex
+        justify-content: center
+        align-items: center
+        p
+            all: unset
+            color: white
+            text-transform: uppercase
+            color: grey
+
+@media screen and (max-width: 1200px)
+    footer
+        .tag
+            grid: "fiche1" auto/1fr 1fr 1fr
+            padding: 0 50px
+            gap:  0 25px
+            .about
+                h6
+                    margin-top: 40px
+                p
+                    margin-bottom: 10px
+                    font-size: 12px
+            .posts
+                h6
+                    margin-top: 40px
+                p
+                    margin-bottom: 10px
+                    font-size: 12px
+            .cloud
+                margin-bottom: 40px
+                h6
+                    margin-top: 40px
+                span
+                    font-size: 10px
+@media screen and (max-width: 600px)
+    footer
+        .tag
+            grid: "fiche1" auto/1fr
+            padding: 0 50px
+            gap:  0 25px
+            .posts
+                h6
+                    margin-top: 0px
+            .cloud
+                h6
+                    margin-top: 0px
+        .copyright
+            font-size: 10px
