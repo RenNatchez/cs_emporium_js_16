@@ -152,8 +152,9 @@ window.addEventListener('scroll', function () {
 let btnLight =  document.querySelector('.light')
 let btnDark =  document.querySelector('.dark')
     //Select les choses a mettre en dark
-    let bgTitre =  document.querySelector('.nav-titre')
-    let bgContainer =  document.querySelector('.container')
+let bgTitre =  document.querySelector('.nav-titre')
+let bgContainer =  document.querySelector('.container')
+let bgFooter =  document.querySelector('.tag')
 
 
 btnLight.addEventListener('click', () => {
@@ -161,7 +162,7 @@ btnLight.addEventListener('click', () => {
     body.style.color = "black"
     bgTitre.style.backgroundColor = "white"
     containeurNav.style.backgroundColor = "white"
-
+    bgFooter.style.backgroundColor = '#343a40'
     for (let i = 0; i <  9; i++) {
         var bgProduitInfo =  document.querySelectorAll('.produit-info')[i]
         bgProduitInfo.style.backgroundColor = "white"
@@ -176,7 +177,7 @@ btnDark.addEventListener('click', () => {
     body.style.color = "white"
     bgTitre.style.backgroundColor = "black"
     containeurNav.style.backgroundColor = "black"
-    
+    bgFooter.style.backgroundColor = 'black'
     for (let i = 0; i <  9; i++) {
         var bgProduitInfo =  document.querySelectorAll('.produit-info')[i]
         bgProduitInfo.style.backgroundColor = "black"
