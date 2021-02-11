@@ -1,7 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "poppins";
   overflow-y: auto;
 }
 
@@ -27,6 +31,7 @@ header nav .container {
   background-color: white;
   justify-content: space-around;
   z-index: 1;
+  position: relative;
 }
 header nav .container ul {
   display: flex;
@@ -114,6 +119,7 @@ header .modal {
   transform: translate(-50%, -50%);
   text-align: center;
   display: none;
+  z-index: 2;
 }
 header .modal .head {
   display: flex;
@@ -260,16 +266,19 @@ header .modal .foot .fa-snapchat-ghost {
   }
 }
 @media screen and (max-width: 812px) {
-  header nav .container ul {
+  header nav #titre_schrol {
+    margin-left: 35px;
+  }
+  header nav #titre_schrol ul {
     display: none;
   }
-  header nav .container ul a {
+  header nav #titre_schrol ul a {
     display: none;
   }
-  header nav .container div {
+  header nav #titre_schrol div {
     flex: 0;
   }
-  header nav .container #menuDeroulant {
+  header nav #titre_schrol #menuDeroulant {
     flex: 1;
   }
   header #navburger {
@@ -880,6 +889,31 @@ footer .copyright p {
     font-size: 10px;
   }
 }
+#darkmode {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  left: 1240px;
+  width: 40px;
+  justify-content: space-between;
+}
+#darkmode .light {
+  height: 15px;
+  width: 15px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  border: solid grey 1px;
+  margin-right: 4px;
+}
+#darkmode .dark {
+  height: 15px;
+  width: 15px;
+  background-color: #343a40;
+  border-radius: 5px;
+  border: solid grey 1px;
+  margin-left: 4px;
+}
+
 /*!
  * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

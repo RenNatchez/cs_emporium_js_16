@@ -88,7 +88,7 @@ for (let i = 0; i < 9; i++) {
     })
 }
 
-
+// carousel 
 const slides = document.querySelector(".slide")
 const buttons = document.querySelector(".map");
 buttons.addEventListener("click", e => {
@@ -129,7 +129,7 @@ buttons.addEventListener("click", e => {
 
 
 
-// ouvrir le menu
+// menu déroulant
 let titreCache = document.querySelector('#titre_schrol')
 let containeurNav = document.querySelector('.container')
 let titreNav = document.querySelector('.nav-titre')
@@ -144,5 +144,45 @@ window.addEventListener('scroll', function () {
         titreCache.style.display = 'none'
         containeurNav.style.position ='relative'
         titreNav.style.display ='block'
+    }
+})
+
+// darkmode
+    //select btn
+let btnLight =  document.querySelector('.light')
+let btnDark =  document.querySelector('.dark')
+    //Select les choses a mettre en dark
+    let bgTitre =  document.querySelector('.nav-titre')
+    let bgContainer =  document.querySelector('.container')
+
+
+btnLight.addEventListener('click', () => {
+    body.style.backgroundColor = "white"
+    body.style.color = "black"
+    bgTitre.style.backgroundColor = "white"
+    containeurNav.style.backgroundColor = "white"
+
+    for (let i = 0; i <  9; i++) {
+        var bgProduitInfo =  document.querySelectorAll('.produit-info')[i]
+        bgProduitInfo.style.backgroundColor = "white"
+    }
+    for (let i = 0; i <  9; i++) {
+        var bgCardText =  document.querySelectorAll('.cart-text')[i]
+        bgCardText.style.backgroundColor = "white"
+    }
+})
+btnDark.addEventListener('click', () => {
+    body.style.backgroundColor = "black"
+    body.style.color = "white"
+    bgTitre.style.backgroundColor = "black"
+    containeurNav.style.backgroundColor = "black"
+    
+    for (let i = 0; i <  9; i++) {
+        var bgProduitInfo =  document.querySelectorAll('.produit-info')[i]
+        bgProduitInfo.style.backgroundColor = "black"
+    }
+    for (let i = 0; i <  9; i++) {
+        var bgCardText =  document.querySelectorAll('.cart-text')[i]
+        bgCardText.style.backgroundColor = "black"
     }
 })
